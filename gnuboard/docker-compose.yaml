@@ -16,6 +16,9 @@ services:
   web:
     build:
         context: ./docker
+    working_dir: "/var/www/"
+    environment:
+        - "MODE=LOCAL_DEV"
     volumes:
       - "./projects/:/var/www/"
     depends_on:

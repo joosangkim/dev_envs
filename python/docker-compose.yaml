@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  python-dev:
+    container_name: python-dev
+    image: jskim/python:latest
+    tty: true
+    working_dir: "/opt/python/projects/"
+    command: "/bin/bash"
+    volumes:
+        - "./projects/:/opt/python/projects/"
+    
